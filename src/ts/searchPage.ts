@@ -74,17 +74,14 @@ const renderTrackResults = (result: SearchResult, index: number) => {
 
     trackDiv.innerHTML = `
     <div class="d-flex">
-        <a href="../../album.html?id=${
-          result.tracks[index].data.albumOfTrack.id
-        }">
-          <img src="${
-            result.tracks[index].data.albumOfTrack.coverArt.sources[0].url
-          }" class="fluid"/>
+        <a href="../../album.html?id=${result.tracks[index].data.albumOfTrack.id
+      }">
+          <img src="${result.tracks[index].data.albumOfTrack.coverArt.sources[0].url
+      }" class="fluid"/>
         </a>
       <div class="single-track-search-page-details ms-2">
-        <p class="mb-0"><a href="#" class="text-white text-decoration-none">${
-          result.tracks[index].data.name
-        }</a></p>
+        <p class="mb-0"><a href="#" class="text-white text-decoration-none">${result.tracks[index].data.name
+      }</a></p>
         <p class="mt-0">${artistLinks}</p>
       </div>
     </div>

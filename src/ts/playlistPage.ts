@@ -98,18 +98,16 @@ const renderPlaylistTrack = (track: Track, index: number) => {
       </div>
       <div class="d-flex flex-column justify-content-center">
         <p class="mb-0">
-          <a href="../../album.html?id=${
-            track.album.id
-          }" class="text-decoration-none text-white">${track.name}</a>
+          <a href="../../album.html?id=${track.album.id
+      }" class="text-decoration-none text-white">${track.name}</a>
         </p>
         <p class="my-0">
           ${artistLinks}
         </p>
       </div>
     </div>
-    <div class="col-5"><a href="../../album.html?id=${
-      track.album.id
-    }" class="text-white text-decoration-none">${track.album.name}</a></div>
+    <div class="col-5"><a href="../../album.html?id=${track.album.id
+      }" class="text-white text-decoration-none">${track.album.name}</a></div>
     <div class="col">${formatMilliseconds(track.duration_ms)}</div>
     `;
 

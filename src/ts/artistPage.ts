@@ -75,12 +75,11 @@ const renderHeader = (artistOvw: ArtistOverview) => {
   if (artistHeroDesc) {
     artistHeroDesc.innerHTML = `
     <p class="mb-0"><i class="bi bi-check-circle-fill me-2"></i>Artista verificato</p>
-    <p class="playlist-name display-2 fw-bold" id="playlistName">${
-      artistOvw.profile.name
-    }</p>
+    <p class="playlist-name display-2 fw-bold" id="playlistName">${artistOvw.profile.name
+      }</p>
     <p>${artistOvw.stats.monthlyListeners.toLocaleString(
-      "en-US"
-    )} ascoltatori mensili</p>
+        "en-US"
+      )} ascoltatori mensili</p>
     `;
   }
 };
@@ -117,8 +116,7 @@ const renderPopularTracks = (artistOvw: ArtistOverview, index: number) => {
       (artist) =>
         `<a href="../../artists.html?id=${artist.uri
           .split(":")
-          .pop()}" class="text-decoration-none text-secondary">${
-          artist.profile.name
+          .pop()}" class="text-decoration-none text-secondary">${artist.profile.name
         }</a>`
     );
 
@@ -127,21 +125,19 @@ const renderPopularTracks = (artistOvw: ArtistOverview, index: number) => {
     <div class="col-10 d-flex">
       <div>
         <img id="trackImg-${index + 1}"
-          src="${
-            artistOvw.discography.topTracks.items[index].track.album.coverArt
-              .sources[0].url
-          }"
+          src="${artistOvw.discography.topTracks.items[index].track.album.coverArt
+        .sources[0].url
+      }"
           class="img-fluid " />
       </div>
       <div class="d-flex flex-column justify-content-center">
         <p class="mb-0">
           <a href="../../album.html?id=${artistOvw.discography.topTracks.items[
-            index
-          ].track.album.uri
-            .split(":")
-            .pop()}" class="text-decoration-none text-white">${
-      artistOvw.discography.topTracks.items[index].track.name
-    }</a>
+        index
+      ].track.album.uri
+        .split(":")
+        .pop()}" class="text-decoration-none text-white">${artistOvw.discography.topTracks.items[index].track.name
+      }</a>
         </p>
         <p class="my-0">
           ${artistLinks}
@@ -149,9 +145,9 @@ const renderPopularTracks = (artistOvw: ArtistOverview, index: number) => {
       </div>
     </div>
     <div class="col">${formatMilliseconds(
-      artistOvw.discography.topTracks.items[index].track.duration
-        .totalMilliseconds
-    )}</div>
+        artistOvw.discography.topTracks.items[index].track.duration
+          .totalMilliseconds
+      )}</div>
     `;
 
     tracksContainer.appendChild(trackDiv);
